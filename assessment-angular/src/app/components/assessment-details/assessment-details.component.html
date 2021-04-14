@@ -1,0 +1,56 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentAssessment" class="edit-form">
+    <h4>Job</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentAssessment.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentAssessment.description"
+          name="description"
+        />
+      </div>
+      <div class="form-group">
+        <label for="experience">Experience</label>
+        <input
+          type="text"
+          class="form-control"
+          id="experience"
+          [(ngModel)]="currentAssessment.experience"
+          name="experience"
+        />
+      </div>
+
+    </form>
+
+    <button class="badge badge-danger mr-2" (click)="deleteAssessment()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success"
+      (click)="updateAssessment()"
+    >
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentAssessment">
+    <br />
+    <p>Cannot access this Job...</p>
+  </div>
+</div>

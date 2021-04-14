@@ -1,0 +1,33 @@
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Jobs List</h4>
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Experience</th>
+        <th scope="col">Description</th>
+        <th scope="col">Status</th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let assessment of assessments; let i = index">
+        <td>{{ assessment.title }}</td>
+        <td>{{ assessment.experience }}</td>
+        <td>{{ assessment.description }}</td>
+        <td>{{ assessment.status }}</td>
+        <td style="width:70%"><a class="badge badge-primary" routerLink="/assessments/{{ assessment.id }}">Edit</a> |
+          <a class="badge badge-warning" routerLink="/assessments/job/{{ assessment.id }}">
+            View
+          </a></td>
+      </tr>
+      </tbody>
+    </table>
+
+<!--    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllAssessments()">-->
+<!--      Remove All-->
+<!--    </button>-->
+  </div>
+</div>
