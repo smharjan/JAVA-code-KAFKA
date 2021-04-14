@@ -1,0 +1,11 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentAssessment">
+    <h4>Job</h4>
+    <p><b>Title: </b> {{ currentAssessment.title }}</p>
+    <p><b>Experience: </b> {{ currentAssessment.experience }}</p>
+    <p><b>Description: </b> {{ currentAssessment.description }}</p>
+    <p><b>Status: </b> {{ currentAssessment.status }}</p>
+    <a class="badge badge-primary" routerLink="/assessments/{{ currentAssessment.id }}">Edit</a>
+  </div>
+
+</div>
