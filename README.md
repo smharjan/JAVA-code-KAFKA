@@ -1,2 +1,1 @@
-# assessment-work
-KAFKA java code
+# KAFKA java code
